@@ -1,0 +1,16 @@
+body{
+    display: grid;
+    grid-template-rows: 
+    "nav nav"
+    "header header"
+    "main sideBar"
+    "footer footer";
+}
+#donutBtn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+img{
+    width: 300px;
+}
