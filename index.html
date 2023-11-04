@@ -5,15 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet"> 
     <title>Donut Clicker</title>
 </head>
 <body>
-    <nav>
+    <nav class="nav-bar">
         <ul>
-            <li><a href="#">Bakery Info</a></li>
-            <li><a href="#">Cookie Clicker</a></li>
-            <li><a href="#">Contact Me</a></li>
-        </ul>
+            <li><a href="#popup-box1">About the Bakery</a></li>
+            <li><a href="https://orteil.dashnet.org/cookieclicker/">Game Inspiration</a></li>
+            <li><a href="#popup-box2">About the Developer</a></li>
+        </ul> 
+            <div id="popup-box1" class="modal">
+                <div class="content">
+                    <h1>About the Bakery</h1>
+                    <b>
+                        <p>info about fred the baker baking company</p> 
+                    </b>
+                    <a href="#" class="box-close">×</a>                         
+                </div>                             
+            </div>
+            <div id="popup-box2" class="modal">
+                <div class="content">
+                    <h1>About the Developer</h1>
+                    <b>
+                        <p>My name is Madeline Taylor. I developed this game for a project in my coding class. I'm currently a student at the We Can Code It bootcamp. I am a stay-at-home mom working on becoming a full time developer. Feel free to contact me and check out my other projects below!</p>
+                        <a href="https://www.linkedin.com/in/madeline-taylor-420001296/">LinkedIn</a>
+                        <a href="https://github.com/madtaylor21">GitHub</a>
+                    </b>
+                    <a href="#" class="box-close">×</a>
+                </div>
+            </div>
     </nav>
     <header>
         <H1>Donut Clicker</H1>
@@ -21,17 +47,20 @@
     <section class="clicks">
         <div>
             <p>Donuts Made: <a id="total">0</a></p>
-            <button id="donutBtn" onclick="onClick()""><img src="./images/donut.png" alt="donut button"></button>
+            <button id="donutBtn" onclick="donutClick()""><img src="./images/donut.png" alt="donut button"></button>
         </div>
     </section>
     <section class="autoClicks">
         <h2>Hire Some Help</h2>
+        <p>Cost per Baker: <a id="price">10</a> clicks</p>
             <div>
-                <button id="autoClick1"> Auto Click</button>
+                <button id="autoClickBtn" onclick="purchaseAutoClick()">Hire a Baker</button>
+                <p id="activeClickers">Active Bakers: <a id="active">0</a></p> 
             </div>
-
     </section>
-    
+    <footer>
+        <p>&copy; Madeline Taylor 2023</p>
+    </footer>
     <script src="app.js"></script>
 </body>
 </html>
